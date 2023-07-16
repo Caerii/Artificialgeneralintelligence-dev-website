@@ -1,2 +1,2 @@
 # Artificialgeneralintelligence-dev-website
-AGI Dev community
+AGI Dev community website
