@@ -15,3 +15,20 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd artificialgeneralintelligence-dev-website && npm install
+    build:
+      commands:
+        - cd artificialgeneralintelligence-dev-website && npm run build
+  artifacts:
+    baseDirectory: artificialgeneralintelligence-dev-website/build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - artificialgeneralintelligence-dev-website/node_modules/**/*
