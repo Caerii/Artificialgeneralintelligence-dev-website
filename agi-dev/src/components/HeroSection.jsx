@@ -1,5 +1,5 @@
 import React from 'react';
-import './HeroSection.css';
+import './styling/HeroSection.css';
 
 // This should be a bold section that captures the essence of AGI and what the site is about.
 // Include a striking image or animation, a headline, and a call-to-action button.

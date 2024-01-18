@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
@@ -16,15 +17,15 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        
-        <HeroSection />
-        Create
-        <AboutAGI />
-        <Research />
-        <ExperimentalApproaches />
-        <TeamLab />
-        <NewsPublications />
-        <ContactSocial />
+        <Routes>
+          <Route path="/" element={<HeroSection />} />
+          <Route path="/about" element={<AboutAGI />} />
+          <Route path="/research" element={<Research />} />
+          <Route path="/experiments" element={<ExperimentalApproaches />} />
+          <Route path="/team" element={<TeamLab />} />
+          <Route path="/news" element={<NewsPublications />} />
+          <Route path="/contact" element={<ContactSocial />} />
+        </Routes>
       </main>
       <Footer />
     </div>
