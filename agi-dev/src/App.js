@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        Test
+        Try again
         <HeroSection />
         <AboutAGI />
         <Research />
