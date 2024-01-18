@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        Try
+        
         <HeroSection />
         Create
         <AboutAGI />
