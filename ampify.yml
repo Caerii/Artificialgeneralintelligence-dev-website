@@ -3,7 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd artificialgeneralintelligence-dev-website && npm install
+        - cd agi-dev && npm install
     build:
       commands:
         - cd artificialgeneralintelligence-dev-website && npm run build
