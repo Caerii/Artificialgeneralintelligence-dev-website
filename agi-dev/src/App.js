@@ -16,8 +16,9 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        Try again
+        Try
         <HeroSection />
+        Create
         <AboutAGI />
         <Research />
         <ExperimentalApproaches />
