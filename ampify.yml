@@ -3,24 +3,6 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd artificialgeneralintelligence-dev-website
-        - npm install
-    build:
-      commands:
-        - npm run build
-  artifacts:
-    baseDirectory: artificialgeneralintelligence-dev-website/build  # Change this to your actual build output folder
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - node_modules/**/*
-
-version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
         - cd artificialgeneralintelligence-dev-website && npm install
     build:
       commands:
