@@ -1,24 +1,8 @@
-import React, { useRef } from 'react';
 import './styling/AboutAGI.css';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { EffectComposer, Glitch, Pixelation } from '@react-three/postprocessing';
-
-const SpinningCube = () => {
-    const cubeRef = useRef();
-    useFrame(() => {
-        if (cubeRef.current) {
-            cubeRef.current.rotation.x += 0.01;
-            cubeRef.current.rotation.y += 0.01;
-        }
-    });
-    return (
-        <mesh ref={cubeRef}>
-            <boxGeometry args={[2, 2, 2]} />
-            <meshStandardMaterial color={'black'} />
-        </mesh>
-    );
-};
+import SpinningCube from './SpinningCube';
 
 const AboutAGI = () => (
     <div className="about-agi">

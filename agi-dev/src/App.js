@@ -11,7 +11,7 @@ import TeamLab from './components/TeamLab';
 import NewsPublications from './components/NewsPublications';
 import ContactSocial from './components/ContactSocial';
 import Footer from './components/Footer';
-import CylinderPage from './components/Cylinder';
+// import CylinderPage from './components/Cylinder';
 
 function App() {
   return (
@@ -20,8 +20,7 @@ function App() {
       
       <main>
         <Routes>
-          <Route path="/" element={<CylinderPage />} />
-          <Route path="/home" element={<CylinderPage />} />
+          <Route path="/" element={<HeroSection />} />
           <Route path="/about" element={<AboutAGI />} />
           <Route path="/research" element={<Research />} />
           <Route path="/experiments" element={<ExperimentalApproaches />} />

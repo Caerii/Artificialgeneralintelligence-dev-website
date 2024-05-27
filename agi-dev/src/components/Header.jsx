@@ -34,6 +34,7 @@ const Header = () => {
           <Link to="/">
             <img src={`${process.env.PUBLIC_URL}/logo192.png`} alt="Logo" />
           </Link>
+
         </div>
         {isMobile ? (
           <div className="hamburger" onClick={() => setNavOpen(!navOpen)}>
