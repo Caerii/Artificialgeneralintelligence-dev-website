@@ -11,14 +11,17 @@ import TeamLab from './components/TeamLab';
 import NewsPublications from './components/NewsPublications';
 import ContactSocial from './components/ContactSocial';
 import Footer from './components/Footer';
+import CylinderPage from './components/Cylinder';
 
 function App() {
   return (
     <div className="App">
       <Header />
+      
       <main>
         <Routes>
-          <Route path="/" element={<HeroSection />} />
+          <Route path="/" element={<CylinderPage />} />
+          <Route path="/home" element={<CylinderPage />} />
           <Route path="/about" element={<AboutAGI />} />
           <Route path="/research" element={<Research />} />
           <Route path="/experiments" element={<ExperimentalApproaches />} />

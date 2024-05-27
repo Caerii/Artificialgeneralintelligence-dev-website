@@ -1,17 +1,39 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
 import './styling/HeroSection.css';
 
-// This should be a bold section that captures the essence of AGI and what the site is about.
-// Include a striking image or animation, a headline, and a call-to-action button.
+function SpinningMesh({ position, args, color }) {
+  const meshRef = useRef();
+
+  useFrame(() => {
+    meshRef.current.rotation.x += 0.01;
+    meshRef.current.rotation.y += 0.01;
+    meshRef.current.rotation.z += 0.01;
+  });
+
+  return (
+    <mesh position={position} ref={meshRef}>
+      <boxGeometry args={args} />
+      <meshStandardMaterial color={color} />
+    </mesh>
+  );
+}
 
 const HeroSection = () => (
-    <section className="hero-section" id="home">
-      <div className="hero-content">
-        <h1>Exploring the Boundaries of Artificial General Intelligence</h1>
-        <p>Join us on a journey to the forefront of AGI development.</p>
-        <button className="cta-button">Discover More</button>
-      </div>
-    </section>
-  );
+  <section className="hero-section" id="home">
+    <Canvas>
+      <ambientLight intensity={10.5} />
+      <pointLight position={[10, 10, 10]} />
+      <SpinningMesh position={[0, 0, 0]} args={[3, 3, 3]} color="white" />
+      <OrbitControls enableZoom={false} />
+    </Canvas>
+    <div className="hero-content">
+      <h1 className="hero-title">Dive Into AGI</h1>
+      <p className="hero-subtitle">Beyond the black box.</p>
+      <button className="cta-button">Start the Adventure</button>
+    </div>
+  </section>
+);
 
 export default HeroSection;
