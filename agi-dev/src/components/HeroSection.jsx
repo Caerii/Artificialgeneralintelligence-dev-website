@@ -6,6 +6,7 @@ import CylinderPage from './CylinderPage';
 
 const HeroSection = () => (
   <section className="hero-section" id="home">
+    
     <CylinderPage/>
   </section>
 );

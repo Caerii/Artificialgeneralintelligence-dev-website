@@ -11,6 +11,8 @@ import TeamLab from './components/TeamLab';
 import NewsPublications from './components/NewsPublications';
 import ContactSocial from './components/ContactSocial';
 import Footer from './components/Footer';
+import TilePage from './components/TilePage';
+
 // import CylinderPage from './components/Cylinder';
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
           <Route path="/team" element={<TeamLab />} />
           <Route path="/news" element={<NewsPublications />} />
           <Route path="/contact" element={<ContactSocial />} />
+          {/* Dynamic route for tile pages */}
+          <Route path="/tile/:tileId" element={<TilePage />} />
         </Routes>
       </main>
       <Footer />

@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
 }
 
 .canvas-container {
@@ -11,6 +12,8 @@ body {
   justify-content: center;
   position: relative;
   flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tile-content {
@@ -21,15 +24,29 @@ body {
   height: 100%;
   width: 95%;
   padding: 5px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tile-content:hover {
+  box-shadow: 0 0 20px rgba(173, 216, 230, 0.8); /* Light blue glow */
+  transform: scale(1.05);
+}
+
+.selected {
+  transform: scale(1.5);
+  transition: transform 0.3s ease-in-out;
 }
 
 h1, h2 {
-  margin-bottom: 15px;
-  font-size: 1.2rem;
+  margin: 10px 0;
+  font-size: 1rem; /* Smaller font size for titles */
   text-align: center;
+  color: #333;
 }
 
 ul {
@@ -47,7 +64,7 @@ ul li a {
   color: #1a73e8;
   font-weight: bold;
   transition: color 0.3s;
-  font-size: 1rem;
+  font-size: 0.8rem; /* Smaller font size for list items */
 }
 
 ul li a:hover {
@@ -55,14 +72,14 @@ ul li a:hover {
 }
 
 button {
-  padding: 10px 15px;
+  padding: 8px 12px; /* Adjust padding to fit smaller size */
   border: none;
   border-radius: 10px;
   background: linear-gradient(to right, #ff8c00, #ff0080);
   color: white;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
-  font-size: 1rem;
+  font-size: 0.9rem; /* Smaller font size for buttons */
 }
 
 button:hover {
@@ -71,8 +88,9 @@ button:hover {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 0.8rem; /* Smaller font size for paragraphs */
   text-align: center;
+  color: #555;
 }
 
 .canvas-container {
@@ -86,15 +104,9 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .tile-content:hover {
   box-shadow: 0 0 20px rgba(173, 216, 230, 0.8); /* Light blue glow */
   transform: scale(1.2);
-}
-
-.selected {
-  transform: scale(1.5);
-  transition: transform 0.3s ease-in-out;
 }
