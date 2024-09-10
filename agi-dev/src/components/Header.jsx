@@ -30,21 +30,18 @@ const Header = () => {
     <header className="site-header">
       <nav className="nav-bar">
         <div className="logo">
-          {/* Insert logo image or text here */}
           <Link to="/">
             <img src={`${process.env.PUBLIC_URL}/logo192.png`} alt="Logo" />
           </Link>
-
         </div>
         {isMobile ? (
-          <div className="hamburger" onClick={() => setNavOpen(!navOpen)}>
+          <div className={`hamburger ${navOpen ? 'active' : ''}`} onClick={() => setNavOpen(!navOpen)}>
             <div></div>
             <div></div>
             <div></div>
           </div>
         ) : null}
-        <ul className={`nav-links ${navOpen ? 'active' : ''} ${isMobile ? '' : 'desktop'}`}>
-          {/* Use `Link` component for navigation */}
+        <ul className={`nav-links ${navOpen ? 'active' : ''}`}>
           <li className={isActive('/') ? 'active' : ''}>
             <Link to="/" onClick={() => setNavOpen(false)}>Home</Link>
           </li>
@@ -58,13 +55,13 @@ const Header = () => {
             <Link to="/experiments" onClick={() => setNavOpen(false)}>Experimental Approaches</Link>
           </li>
           <li className={isActive('/team') ? 'active' : ''}>
-            <Link to="/team" onClick={() => setNavOpen(false)}>Team Lab</Link>
+            <Link to="/team" onClick={() => setNavOpen(false)}>Team</Link>
           </li>
           <li className={isActive('/news') ? 'active' : ''}>
-            <Link to="/news" onClick={() => setNavOpen(false)}>News & Publications</Link>
+            <Link to="/news" onClick={() => setNavOpen(false)}>News</Link>
           </li>
           <li className={isActive('/contact') ? 'active' : ''}>
-            <Link to="/contact" onClick={() => setNavOpen(false)}>Contact & Social</Link>
+            <Link to="/contact" onClick={() => setNavOpen(false)}>Contact</Link>
           </li>
         </ul>
       </nav>

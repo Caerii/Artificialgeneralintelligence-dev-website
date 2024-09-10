@@ -1,6 +1,6 @@
 /* Reset some basic elements */
 body, h1, h2, h3, p, ul, li, a {
-  margin: 0;
+  margin: 10;
   padding: 0;
   list-style: none;
   text-decoration: none;
@@ -11,7 +11,6 @@ body, h1, h2, h3, p, ul, li, a {
 .App {
   text-align: center;
   color: #333;
-  max-width: 1200px;
   margin: 0 auto;
   font-family: 'Helvetica Neue', sans-serif;
 }

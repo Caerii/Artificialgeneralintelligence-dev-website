@@ -1,0 +1,169 @@
+/* FrontPage.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wiki-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+  
+  .wiki-header {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 15px;
+
+  }
+  
+  .frontpage-logo img { /* The frontpage image logo */
+    width: 350px;
+    margin-top: 10px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    color: #333;
+  }
+  
+  .intro-text {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  
+  .wiki-main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    
+  }
+  
+  .main-content {
+    flex: 0 0 70%;
+    padding-right: 20px;
+    
+  }
+  
+  .main-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .main-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .featured-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .featured-list li {
+    margin-bottom: 10px;
+  }
+  
+  .featured-list li a {
+    text-decoration: none;
+    color: #0056b3;
+  }
+  
+  .featured-list li a:hover {
+    text-decoration: underline;
+  }
+  
+  .featured-content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .featured-content p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  .wiki-sidebar {
+    flex: 0 0 25%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wiki-sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .wiki-sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .wiki-sidebar ul li {
+    margin-bottom: 10px;
+  }
+  
+  .wiki-sidebar ul li a {
+    text-decoration: none;
+    color: #0056b3;
+  }
+  
+  .wiki-sidebar ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .wiki-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    margin-top: 30px;
+  }
+  
+  .wiki-footer p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .wiki-footer a {
+    color: #0056b3;
+  }
+  
+  .wiki-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .wiki-main-content {
+      flex-direction: column;
+    }
+  
+    .main-content {
+      padding-right: 0;
+    }
+  
+    .wiki-sidebar {
+      margin-top: 20px;
+    }
+  }
+  
